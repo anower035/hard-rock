@@ -38,7 +38,7 @@ function showData(data) {
       <div class="col-md-9">
           <h3 class="lyrics-name">${song.title}</h3>
           <p class="author lead"><h5>Album : <span>${song.album.title}</h5></span></p>
-          <p class="author name">Artist Name : <span>${song.artist.name}</span></p>
+          <p class="author name">Artist : <span>${song.artist.name}</span></p>
       </div>
       <div class="col-md-3 text-md-right text-center">
         <button class="btn btn-success" data-artist="${song.artist.name}" data-songtitle="${song.title}">Get Lyrics</button>
@@ -49,8 +49,8 @@ function showData(data) {
     `;
 if(data.prev || data.next){
   more.innerHTML=`
-  ${data.prev ? `<button class="new" onclick="getMoreSongs('${data.prev}')">Prev</button>` : ''}
-  ${data.next ? `<button class="new" onclick="getMoreSongs('${data.next}')">Next</button>` : ''}
+  ${data.prev ? `<button class="new btn-success" onclick="getMoreSongs('${data.prev}')">Prev</button>` : ''}
+  ${data.next ? `<button class="new btn-success" onclick="getMoreSongs('${data.next}')">Next</button>` : ''}
   `
 }
 else{
